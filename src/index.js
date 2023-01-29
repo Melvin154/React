@@ -20,8 +20,8 @@ class Website extends React.Component{
 ReactDOM.render(<Website/>,document.getElementById('root'))
 */
 
-
 //Props
+/*
 class Learnreactpropsparent extends React.Component {
   render() {
     return (
@@ -66,3 +66,30 @@ class Learnreactpropsgrandchild extends React.Component {
 }
 Learnreactpropsgrandchild.defaultProps={concept:"props",language1:"Korean"}
 //ReactDOM.render(<Learnreactpropsgrandchild concept="component vs state" language1="Telugu"/>,<Learnreactpropschild/>document.getElementById("root"));
+*/
+
+//State
+
+class Reactstate extends React.Component {
+  constructor() {
+    super();
+    this.state = { initialvalue: "Welcome", name: "Black Squad" };
+  }
+  changevalue = () => {
+    this.setState({ initialvalue: "Thanks for Watching" });
+  }
+  render() {
+    return  <div>
+        <h1>
+          {this.state.initialvalue} {this.state.name}
+        </h1>
+        <br></br>
+        <button type="button" onClick={this.changevalue}>
+          Exit
+        </button>
+      </div>
+    
+  }
+}
+
+ReactDOM.render(<Reactstate />, document.getElementById("root"));
