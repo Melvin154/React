@@ -1,6 +1,11 @@
 
-import './App.css';
 
+import React from 'react';
+import  ReactDOM  from 'react';
+
+//Components
+//Function Components
+/*
 function App() {
   return (
     <div className="App">
@@ -10,5 +15,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
+*/
