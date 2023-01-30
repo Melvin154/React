@@ -69,7 +69,7 @@ Learnreactpropsgrandchild.defaultProps={concept:"props",language1:"Korean"}
 */
 
 //State
-
+/*
 class Reactstate extends React.Component {
   constructor() {
     super();
@@ -93,3 +93,59 @@ class Reactstate extends React.Component {
 }
 
 ReactDOM.render(<Reactstate />, document.getElementById("root"));
+*/
+
+//React Lifecycle
+//4 phases: Initial,Mounting,Updating,Unmounting
+//Initial phase: getDefaultProps(),getInitialState()
+
+/*
+class Lifecycle extends React.Component {
+  constructor() {
+    super();
+    this.state = { value: "Welcome", name: "Black Squad" };
+  }
+  componentWillMount() {//Mouunting Phase
+    alert("Learn React Js Lifecycle");
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>
+          {this.state.value} {this.state.name}
+        </h1>
+        <br></br>
+        <button type="button" onClick={this.changevalue}>change Value</button>
+        <button type="button" onClick={this.deleteheader}>Delete Header</button>
+      </div>
+    );
+  }
+  changevalue=()=>{
+this.setState({value:"Learn React Js in Tamil"})
+  }
+  deleteheader=()=>{this.setState({value:false,name:false})}
+
+  componentDidMount() {//Mounting Phase
+    setTimeout(() => {
+      this.setState({ value: "Thank you" });
+    }, 5000);
+  }
+  componentWillUpdate(){//Updating Phase
+    alert("Do you want to update a new value ? ")
+  }
+  componentDidUpdate(){//Updating Phase
+    document.getElementById('mydiv').innerHTML="New value Updated Sucessfully " + this.state.value;
+  }
+  shouldComponentUpdate(){//Updating phase
+    return true;
+  }
+  componentWillUnmount(){//Unmounting phase
+    alert('Header Deleted')
+  }
+}
+
+ReactDOM.render(<Lifecycle />, document.getElementById("root"));
+*/
+
+
