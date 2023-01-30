@@ -1,3 +1,4 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -148,4 +149,26 @@ this.setState({value:"Learn React Js in Tamil"})
 ReactDOM.render(<Lifecycle />, document.getElementById("root"));
 */
 
-
+//EventHandling in React JS
+class Eventbind extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      msg: "Welcome",
+    };
+  }
+  clickEvent = (a) => {
+    this.setState({
+      msg: "Thank You",
+    });
+  };
+  render() {
+    return (
+      <div>
+        <h1>{this.state.msg}</h1>
+        <button onMouseLeave={this.clickEvent.bind(this,"Welcome World")}>Click</button>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<Eventbind />, document.getElementById("root"));
