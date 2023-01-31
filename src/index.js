@@ -1,6 +1,7 @@
-
 import React from "react";
 import ReactDOM from "react-dom";
+import './index.css';
+import styles from './demo.module.css'
 
 //import App from './App.js';
 //Components
@@ -150,6 +151,7 @@ ReactDOM.render(<Lifecycle />, document.getElementById("root"));
 */
 
 //EventHandling in React JS
+/*
 class Eventbind extends React.Component {
   constructor(){
     super();
@@ -172,3 +174,24 @@ class Eventbind extends React.Component {
   }
 }
 ReactDOM.render(<Eventbind />, document.getElementById("root"));
+*/
+
+//React CSS
+
+class Reactstyle extends React.Component {
+  render() {
+    const mystyle={
+      color:"Orange",
+      fontFamily:"Arial"
+    }
+    return (
+      <div>
+        <h1 style={{color:"red",fontSize:"55px",textDecoration:"underline"}}>REACT WITH CSS</h1>
+        <h2 style={mystyle}>Now you are learning How to use css in React Js</h2>
+        <h3 className="Externalcss">Okay !! . Let's Begin</h3>
+        <h4 className={styles.demo}>Get Started !!</h4>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<Reactstyle />, document.getElementById("root"));

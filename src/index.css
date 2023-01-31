@@ -6,3 +6,9 @@
   color: crimson;
   text-transform: uppercase;
 }
+.Externalcss{
+  color: green;
+  text-align: center;
+  font-size: larger;
+  background-color:yellow;
+}
