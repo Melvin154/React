@@ -198,6 +198,7 @@ ReactDOM.render(<Reactstyle />, document.getElementById("root"));
 */
 
 //React Forms
+/*
 class Reactform extends React.Component {
   constructor() {
     super();
@@ -218,7 +219,7 @@ class Reactform extends React.Component {
   };
   formsubmit=(event)=>{
     event.preventDefault();
-    alert("Your Name is " + this.state.username + "And Your Age is " + this.state.age)
+    alert("Your Name is " + this.state.username + " And Your Age is " + this.state.age)
   }
   render() {
     return (
@@ -226,7 +227,7 @@ class Reactform extends React.Component {
         <h1>Hello {this.state.username}</h1>
         <h2>Your Age {this.state.age}</h2>
         Enter Your Name :
-        <input type="text" name="username" onChange={this.uservalue}></input>
+        <input type="text" name="username" onChange={this.uservalue}></input><br></br>
         Enter Your Age :
         <input type="text" name="age" onChange={this.uservalue}/>{this.state.errmsg}
         <input type="submit"/>
@@ -235,3 +236,31 @@ class Reactform extends React.Component {
   }
 }
 ReactDOM.render(<Reactform />, document.getElementById("root"));
+*/
+
+//React Fragments
+class Tablecreation extends React.Component {
+  render() {
+    return (
+      <table>
+        <tr>
+          <Rowcreation />
+        </tr>
+      </table>
+    );
+  }
+}
+class Rowcreation extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Now You are Learning React Fragments</h1>
+        <table>
+          <td>HII</td>
+          <td>BYE</td>
+        </table>
+      </React.Fragment>
+    );
+  }
+}
+ReactDOM.render(<Tablecreation />, document.getElementById("root"));
