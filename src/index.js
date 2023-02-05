@@ -239,6 +239,7 @@ ReactDOM.render(<Reactform />, document.getElementById("root"));
 */
 
 //React Fragments
+/*
 class Tablecreation extends React.Component {
   render() {
     return (
@@ -264,3 +265,16 @@ class Rowcreation extends React.Component {
   }
 }
 ReactDOM.render(<Tablecreation />, document.getElementById("root"));
+*/
+
+//React Lists
+/*
+function Menubar() {
+  const newlist = [1, 2, 3, 4, 5, "React", "Node"];
+  const r1 = newlist.map((listvalues) => {
+    return <li>{listvalues + " " + newlist[5]}</li>;
+  });
+  return <ul>{r1}</ul>;
+}
+ReactDOM.render(<Menubar newlist />, document.getElementById("root"));
+*/
